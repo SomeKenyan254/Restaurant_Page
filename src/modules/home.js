@@ -1,16 +1,7 @@
-
-const load = (() => {
+import createCard from "./util.js";
+const home = (() => {
    
-    //function to create a blank div //
-    const createCard =(content,className = "card") =>{
-        const card = document.createElement("div")
-        card.classList.add(className)
-        card.textContent = content;
-    
-        return card
-    }
-
-    const homeCard = () => {
+   const homeCard = () => {
         const card_mission = "Bite Into Bliss: Where Fresh Meets Flavor!"
         const para = "Established in 1905 Bliss Burgers has been providing exquisite burgers to the residence of Hoodoo Valley. Welcome and experience the Bliss too!"
         
@@ -33,7 +24,7 @@ const load = (() => {
 
     };
     
-    return {homeCard,createCard}
+    return {homeCard}
 
     
 
@@ -45,4 +36,4 @@ const load = (() => {
 })();
 
 
-export default load
+export default home

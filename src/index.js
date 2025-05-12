@@ -5,8 +5,11 @@ import menu from "./modules/menu";
 
 const nav = (() => {
     home.homeCard();
+   
+   
   
     const pageLoad = () => {
+        const content = document.querySelector("#content");
         const buttons = document.querySelectorAll(".buttons");
         buttons.forEach((button) => {
             button.addEventListener("click", (e) => {
@@ -22,7 +25,7 @@ const nav = (() => {
                 }
                 else if(target === "menu"){
                     content.textContent = "";
-                    menubar.loadAbout()
+                    menu.menuCard();
                     
                 }
             });
@@ -31,4 +34,5 @@ const nav = (() => {
     }
     return { pageLoad }
 })();
+
 nav.pageLoad();
